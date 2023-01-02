@@ -1,6 +1,6 @@
 # CMP175-Web Development Project 
 
-## About the project.
+## About.
 
 This project create for the final report of the course CMP175 - Webside development.
 Create using ASP.NET MVC
