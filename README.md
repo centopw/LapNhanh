@@ -37,3 +37,7 @@ Then After that you need to open the project by navigate to ``~\LapNhanh\source\
 Change the ``Server=CENTO`` into you SQLSERVER name
 
 Ex: My server name is ``LOCALHOST`` then it should be ``Server=LOCALHOST``
+
+### Usage
+
+To start using this project 
