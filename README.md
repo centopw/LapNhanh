@@ -3,10 +3,9 @@
 ## About the project.
 
 This project create for the final report of the course CMP175 - Webside development.
+Create using ASP.NET MVC
 
-This Website create using ASP.NET MVC
-
-This project Create by group 4:
+**by group 4:**
 - Nguyen Tan Hiep
 - Do Chi Bao
 - Mai xuan Vien
