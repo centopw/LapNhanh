@@ -17,17 +17,12 @@ namespace EShop.Controllers
         public INotyfService _notyfService { get; } //Import services
         private readonly IConfiguration _config;
 
-        private readonly string _clientId;
-        private readonly string _sercretKey;
-
         public decimal TygiaUSD = 23000;
 
         public ShopCartController(EcommerceVer2Context context, INotyfService notyfService, IConfiguration config)
         {
             _notyfService = notyfService;
             _context = context;
-            _clientId = config["PayPalSettings: ClientId"];
-            _sercretKey = config["PayPalSettings: SecretKey"];
         }
 
         #region Khởi tạo giỏ hàng

@@ -139,9 +139,6 @@ namespace EShop.Controllers
             return View(customer);
         }
 
-        // POST: Admin/AdminCustomers/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("CustommerId,Username,Password,FullName,BirthDay,Avatar,Address,Mail,Phone,Province,District,Ward,CreateDate,LastLogin,IsActived,Randomkey")] Customer customer, Microsoft.AspNetCore.Http.IFormFile fAvatar)
@@ -172,7 +169,7 @@ namespace EShop.Controllers
                 {
                     if (!CustomerExists(customer.CustommerId))
                     {
-                        _notyfService.Error("Lỗi!!!!!!!!!!!!");
+                        _notyfService.Error("Lỗi");
                         return NotFound();
                     }
                     else
