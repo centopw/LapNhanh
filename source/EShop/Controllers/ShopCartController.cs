@@ -96,29 +96,6 @@ namespace EShop.Controllers
                         carts[index].Qty += qty;
                     }
                 }
-                //if (item != null) // giỏ hàng có đồ
-                //{
-                //    //if (qty.HasValue)
-                //    //{
-                //    //    item.Qty = qty.Value; // số lượng = số lượng nhập vào
-                //    //}
-                //    //else
-                //    //{
-                //    //    item.Qty++; // Số lượng tăng 1
-                //    //}
-                //    item.Qty++;
-                //}
-                //else
-                //{
-                //    Product hh = _context.Products.SingleOrDefault(p => p.ProductId == productId);
-                //    item = new CartItem
-                //    {
-                //        Qty = qty.HasValue ? qty.Value : 1,
-                //        product = hh
-                //    };
-                //    carts.Add(item);
-                //}
-                //có nghĩa là m k update đc? ừ, chỉ nhập đc 1 lần duy nhất, những lần sau thêm ko update đc nữa
 
                 GetSession.Set(HttpContext.Session, "GioHang", carts);
                 //HttpContext.Session.Set<List<CartItem>>("GioHang", carts);
@@ -141,11 +118,6 @@ namespace EShop.Controllers
             {
                 if (carts != null)
                 {
-                    //CartItem item = GioHang.SingleOrDefault(x => x.product.ProductId == productId);
-                    //if (item != null && qty.HasValue) // giỏ hàng có đồ
-                    //{
-                    //    item.Qty = qty.Value; // số lượng = số lượng nhập vào
-                    //}
 
                     Product hh = _context.Products.SingleOrDefault(p => p.ProductId == productId);
                     int index = Exists(carts, productId);
@@ -153,7 +125,7 @@ namespace EShop.Controllers
                     {
                         carts.Add(new CartItem
                         {
-                            Qty = qty.HasValue ? qty.Value : 1, // chưa có mặc định nó về 1
+                            Qty = qty.HasValue ? qty.Value : 1, 
                             product = hh
                         });
                     }
