@@ -1,4 +1,4 @@
-# MVC ASP.NET eCommerce Website
+# MVC ASP.NET eCommerce Website.
 
 ## About.
 
